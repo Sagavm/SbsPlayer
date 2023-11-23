@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.media.MediaView?>
+
+<StackPane fx:id="lStackPane" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aftersoft.sbsplayer.LeftController">
+   <children>
+      <MediaView fx:id="leftVideo" fitHeight="360.0" fitWidth="640.0" />
+      <ProgressBar fx:id="progressBar" opacity="0.7" prefWidth="200.0" progress="0.5" StackPane.alignment="BOTTOM_CENTER" />
+      <Slider fx:id="volume" blockIncrement="0.05" max="1.0" maxHeight="-Infinity" opacity="0.7" orientation="VERTICAL" prefHeight="180.0" prefWidth="50.0" value="0.5" StackPane.alignment="BOTTOM_CENTER" />
+      <ImageView fx:id="bGImage" fitHeight="360.0" fitWidth="640.0" pickOnBounds="false" preserveRatio="false">
+         <image>
+            <Image url="@Left.JPG" />
+         </image></ImageView>
+      <Label fx:id="timeLabel" text="0:00.00" StackPane.alignment="BOTTOM_CENTER" />
+   </children>
+</StackPane>
