@@ -15,6 +15,7 @@ import javafx.util.Duration;
 import javafx.scene.Parent;
 import javafx.stage.FileChooser;
 import java.io.File;
+import javafx.scene.image.Image;
 
 
 public class App extends Application {
@@ -42,13 +43,17 @@ public class App extends Application {
         launch(args);
     }
     @Override
-    public void start(Stage Stage) throws Exception {
+    public void start(Stage stage) throws Exception {
         //Check if there are elements on the contextMenu.
         if (contextMenu.getItems().isEmpty()){
             setContextMenu();
         }
+        //create icons
+        Image rIcon = new Image("com/aftersoft/sbsplayer/r_icon.jpg");
+        Image lIcon = new Image("com/aftersoft/sbsplayer/l_icon.jpg");
         //Create the right stage.
         rightStage = new Stage();
+        rightStage.getIcons().add(rIcon);
         rightStage.setTitle("Pantalla Derecha");
         rightStage.initStyle(StageStyle.UNDECORATED);
         //Create the Right Root of elements
@@ -58,6 +63,7 @@ public class App extends Application {
         SetDragging(rightScene,rightStage);
         //Create the left Stage
         leftStage = new Stage();
+        leftStage.getIcons().add(lIcon);
         leftStage.setTitle("Pantalla Izquierda");
         leftStage.initStyle(StageStyle.UNDECORATED);
         //Create the Left Root of elements
